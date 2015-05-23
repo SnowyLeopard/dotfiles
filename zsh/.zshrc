@@ -40,13 +40,15 @@ source /var/lib/gems/1.8/gems/tmuxinator-0.6.8/completion/tmuxinator.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export POWERLINE_COMMAND="$HOME/dotfiles/powerline/client/powerline"
-source $HOME/dotfiles/powerline/powerline/bindings/zsh/powerline.zsh
-$HOME/dotfiles/powerline/scripts/powerline-daemon -q
+export POWERLINE_COMMAND="$HOME/.local/bin/powerline"
+export POWERLINE_CONFIG_COMMAND="$HOME/.local/bin/powerline-config"
+source $HOME/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+$HOME/.local/bin/powerline-daemon -q
+
 export TERM="xterm-256color"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 PYTHONDONTWRITEBYTECODE=true
 export PYTHONDONTWRITEBYTECODE

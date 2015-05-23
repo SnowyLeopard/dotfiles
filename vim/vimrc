@@ -1,4 +1,8 @@
-runtime! neobundle.vim
+"turn off vi compatibility
+set nocompatible
+
+let &runtimepath = &runtimepath . ',' . finddir('bundle/pathogen', &runtimepath)
+call pathogen#infect()
 
 "syntax highlighting on
 syntax on
@@ -18,9 +22,6 @@ filetype plugin on
 filetype indent on 
 
 set backspace=indent,eol,start
-
-"turn off vi compatibility
-set nocompatible
 
 " Buffer switching.
 map ` :Unite buffer -start-insert<CR>

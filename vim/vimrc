@@ -23,7 +23,8 @@ set backspace=indent,eol,start
 set nocompatible
 
 " Buffer switching.
-map ` :Unite buffer<CR>
+map ` :Unite buffer -start-insert<CR>
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 " Map jj to esc in insert mode. Esc is too far away.
 inoremap jj <Esc>
@@ -60,6 +61,10 @@ set noswapfile
 set nobackup
 set nowb
 
+"Fast scrolling
+set ttyfast
+set lazyredraw
+
 "Persistent undo
 set undodir=~/.vim/undodir
 set undofile
@@ -82,17 +87,21 @@ let g:syntastic_php_checkers=['php', 'phpmd']
 
 map <Leader>s :SyntasticToggleMode<CR>
 
+"Powerline settings
+let g:Powerline_symbols = "fancy"
+
 "You complete me
 nnoremap \gt :YcmCompleter GoTo<CR>
+
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
 set previewheight=5
 
-"Powerline
 set rtp+=$HOME/dotfiles/powerline/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
 
-"Use 256 colours (Use this setting only if your terminal supports 256
-"colours)
+" " Use 256 colours (Use this setting only if your terminal supports 256
+" colours)
 set t_Co=256

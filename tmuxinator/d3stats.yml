@@ -1,0 +1,32 @@
+# ~/.tmuxinator/d3stats.yml
+
+name: d3stats
+root: /srv/www/d3stats_angular/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - vim/d3stats-server:
+      layout: ca35,211x62,0,0{125x62,0,0,0,85x62,126,0,1}
+      panes:
+        - cd server/d3stats && source ./venv/bin/activate && vim ./*(.) ./database/models.py
+        - cd server && source ./d3stats/venv/bin/activate && python -B -m d3stats
+  - vim/d3stats-client:
+      panes:
+        - cd client/app && vim ./js/*(.) ./index.html ./controllers/*(.) ./partials/*(.)
+  - zsh:
+      panes:
+        - source ./server/d3stats/venv/bin/activate

@@ -1,30 +1,30 @@
-server {
-
-    listen 443;
-    server_name mail.snowyleopard.nl mail.lucassenmuziek.nl;
-
-    ssl on;
-    ssl_certificate        /etc/nginx/certs/server.crt;
-    ssl_certificate_key    /etc/nginx/certs/server.key;
-
-    root /srv/www/mailserver/mail.snowyleopard.nl/www;
-    index index.php index.html index.htm;
-
-    location ~ \.php$ {
-
-        fastcgi_pass unix:/etc/php5/fpm/socks/ssl_mail.snowyleopard.nl.sock;
-        include fastcgi_params;
-        fastcgi_param HTTPS on;
-
-    }
-
-    location ~ /\. {
-        deny all;
-    }
-
-    access_log /srv/www/mailserver/mail.snowyleopard.nl/logs/access.log;
-    error_log /srv/www/mailserver/mail.snowyleopard.nl/logs/error.log;
-    error_page 404 /404.html;
-
-}
-
+#server {
+#
+#    listen 443;
+#    server_name mail.snowyleopard.nl mail.lucassenmuziek.nl;
+#
+#    ssl on;
+#    ssl_certificate        /etc/nginx/certs/server.crt;
+#    ssl_certificate_key    /etc/nginx/certs/server.key;
+#
+#    root /srv/www/mailserver/mail.snowyleopard.nl/www;
+#    index index.php index.html index.htm;
+#
+#    location ~ \.php$ {
+#
+#        fastcgi_pass unix:/etc/php5/fpm/socks/ssl_mail.snowyleopard.nl.sock;
+#        include fastcgi_params;
+#        fastcgi_param HTTPS on;
+#
+#    }
+#
+#    location ~ /\. {
+#        deny all;
+#    }
+#
+#    access_log /srv/www/mailserver/mail.snowyleopard.nl/logs/access.log;
+#    error_log /srv/www/mailserver/mail.snowyleopard.nl/logs/error.log;
+#    error_page 404 /404.html;
+#
+#}
+#

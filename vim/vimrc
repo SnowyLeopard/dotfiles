@@ -30,6 +30,8 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " Map jj to esc in insert mode. Esc is too far away.
 inoremap jj <Esc>
 
+set pastetoggle=<leader>k
+
 "Obviousmode
 set laststatus=2
 
@@ -91,12 +93,25 @@ map <Leader>s :SyntasticToggleMode<CR>
 "Powerline settings
 let g:Powerline_symbols = "fancy"
 
-"You complete me
-nnoremap \gt :YcmCompleter GoTo<CR>
+"Neocomplete
+let g:neocomplete#enable_at_startup = 1
 
-let g:ycm_autoclose_preview_window_after_insertion = 1
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-set previewheight=5
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 set rtp+=$HOME/dotfiles/powerline/powerline/bindings/vim/
 

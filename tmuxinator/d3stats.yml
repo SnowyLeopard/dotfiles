@@ -1,7 +1,7 @@
 # ~/.tmuxinator/d3stats.yml
 
 name: d3stats
-root: /srv/www/d3stats_angular/
+root: /srv/www/d3stats/
 
 # Optional tmux socket
 # socket_name: foo
@@ -20,13 +20,14 @@ root: /srv/www/d3stats_angular/
 
 windows:
   - vim/d3stats-server:
-      layout: ca35,211x62,0,0{125x62,0,0,0,85x62,126,0,1}
+      layout: 4f33,237x66,0,0{138x66,0,0,12,98x66,139,0[98x33,139,0,15,98x32,139,34,16]}
       panes:
-        - cd server/d3stats && source ./venv/bin/activate && vim ./*(.) ./database/models.py
-        - cd server && source ./d3stats/venv/bin/activate && python -B -m d3stats
+        - cd server/d3stats && workon d3stats && vim ./*.py ./database/models.py ./modules/*.py
+        - cd server && workon d3stats && pypy -B -m d3stats
+        - cd server && workon d3stats && celery -A d3stats.modules.celeryapp.CELERY worker -n w1 -l INFO --concurrency 1
   - vim/d3stats-client:
       panes:
-        - cd client/app && vim ./js/*(.) ./index.html ./controllers/*(.) ./partials/*(.)
+        - cd client/app && vim ./js/*.js ./index.html ./controllers/*.js ./partials/*.html
   - zsh:
       panes:
-        - source ./server/d3stats/venv/bin/activate
+        - workon d3stats

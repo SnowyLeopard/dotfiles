@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/srv/www/rconism-frontend/controllers'
 let g:netrw_dirhist_2='/srv/www/rconism-frontend/models'
 let g:netrw_dirhist_3='/srv/www/rconism-frontend/controllers'
 let g:netrw_dirhist_4='/srv/www/rconism-frontend/assets/js'
 let g:netrw_dirhist_5='/srv/www/rconism-frontend/assets/css'
 let g:netrw_dirhist_6='/home/snowy/rconism/admintool/rconism/database'
+let g:netrw_dirhist_7='/home/snowy/.virtualenvs'

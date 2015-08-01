@@ -50,5 +50,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
-PYTHONDONTWRITEBYTECODE=true
+PYTHONDONTWRITEBYTECODE=false
 export PYTHONDONTWRITEBYTECODE

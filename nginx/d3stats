@@ -21,7 +21,7 @@
 server {
     listen   443; ## listen for ipv4; this line is default and implied
     ssl on;
-    root /srv/www/d3stats_angular/client/app;
+    root /srv/www/d3stats/client/app;
     index index.html index.htm index.php;
     server_name d3stats.org;
 
@@ -50,7 +50,7 @@ server {
 
 server {
     listen   80; ## listen for ipv4; this line is default and implied
-    root /srv/www/d3stats_angular/client/app;
+    root /srv/www/d3stats/client/app;
     index index.html index.htm index.php;
 
     server_name d3stats.org;

@@ -1,7 +1,7 @@
 # ~/.tmuxinator/rconism.yml
 
 project_name: rconism
-project_root: ~/rconism/admintool
+project_root: ~/rconism
 
 # Optional tmux socket
 # socket_name: foo
@@ -22,7 +22,7 @@ windows:
   - vim/rconsim-server:
       layout: ca35,211x62,0,0{125x62,0,0,0,85x62,126,0,1}
       panes:
-        - vim rconism/modules/* rconism/common/* rconism/protocols/*
+        - vim rconism/modules/* rconism/common/* rconism/protocols/* rconism/database/*
         -
   - dir:
       panes:

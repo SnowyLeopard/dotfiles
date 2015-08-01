@@ -36,7 +36,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-source /var/lib/gems/1.8/gems/tmuxinator-0.6.8/completion/tmuxinator.zsh
+source /var/lib/gems/2.1.0/gems/tmuxinator-0.6.11/completion/tmuxinator.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -52,3 +52,6 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 PYTHONDONTWRITEBYTECODE=false
 export PYTHONDONTWRITEBYTECODE
+
+export EDITOR=vim
+export SHELL=/bin/zsh

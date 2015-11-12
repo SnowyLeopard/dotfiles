@@ -25,7 +25,7 @@ server {
 	index index.html index.htm index.php;
 
 	# Make site accessible from http://localhost/
-	server_name phpma.snowyleopard.nl snowyleopard.nl/phpmyadmin d3stats.org/phpmyadmin phpma.d3stats.org;
+	server_name phpma.snowyleopard.nl phpma.d3stats.org new.snowyleopard.nl/phpmyadmin;
 
 	location / {
 		# First attempt to serve request as file, then

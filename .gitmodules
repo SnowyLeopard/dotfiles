@@ -61,3 +61,24 @@
 [submodule "vim/bundle/neocomplete"]
 	path = vim/bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "vim/bundle/html5"]
+	path = vim/bundle/html5
+	url = https://github.com/othree/html5.vim.git
+[submodule "vim/bundle/yajs"]
+	path = vim/bundle/yajs
+	url = https://github.com/othree/yajs.vim
+[submodule "vim/bundle/next-syntax"]
+	path = vim/bundle/next-syntax
+	url = https://github.com/othree/es.next.syntax.vim.git
+[submodule "vim/bundle/polyglot"]
+	path = vim/bundle/polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/bundle/vimproj"]
+	path = vim/bundle/vimproj
+	url = https://github.com/vim-scripts/vimprj.git
+[submodule "vim/bundle/dfrankutil"]
+	path = vim/bundle/dfrankutil
+	url = https://github.com/vim-scripts/DfrankUtil.git
+[submodule "vim/bundle/abolish"]
+	path = vim/bundle/abolish
+	url = https://github.com/tpope/vim-abolish

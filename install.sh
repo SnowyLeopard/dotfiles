@@ -6,11 +6,13 @@ dotfiles="$HOME/dotfiles"
 echo "********************"
 echo "Installing aptitude packages"
 echo "********************"
-sudo apt-get install python python-pip build-essential htop tmux virtualenvwrapper liblua5.1-dev luajit libluajit-5.1 python-dev mysql-server
+sudo apt-get install python python-pip build-essential htop tmux virtualenvwrapper liblua5.1-dev luajit libluajit-5.1 python-dev mysql-server zsh nginx-full
 
 # Workaround to avoid phpmyadmin installing apache
 sudo apt-get install php5-cli php5-fpm fcgiwrap
 sudo apt-get --no-install-recommends install phpmyadmin
+
+gem install tmuxinator
 
 # Install pip packages
 echo "********************"
@@ -154,16 +156,11 @@ then
     echo "********************"
     echo "Installing Nginx config"
     echo "********************"
-    if [[ -d "/etc/nginx/sites-available" ]]
-    then
-        sudo rm -r "/etc/nginx/sites-available"
-    fi
     if [[ -d "/etc/nginx/sites-enabled" ]]
     then
         sudo rm -r "/etc/nginx/sites-enabled"
     fi
 
-    sudo ln -s $dotfiles/nginx /etc/nginx/sites-available
     sudo ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
 else
     echo "********************"

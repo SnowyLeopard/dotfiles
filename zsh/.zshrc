@@ -38,7 +38,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 source /var/lib/gems/2.1.0/gems/tmuxinator-0.6.11/completion/tmuxinator.zsh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/home/snowy/.linuxbrew/bin:$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export POWERLINE_COMMAND="$HOME/.local/bin/powerline"
 export POWERLINE_CONFIG_COMMAND="$HOME/.local/bin/powerline-config"

@@ -16,9 +16,6 @@
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "vim/bundle/unite"]
-	path = vim/bundle/unite
-	url = https://github.com/Shougo/unite.vim.git
 [submodule "vim/bundle/indent"]
 	path = vim/bundle/indent
 	url = https://github.com/nathanaelkane/vim-indent-guides.git

@@ -23,13 +23,8 @@ filetype indent on
 
 set backspace=indent,eol,start
 
-" Buffer switching.
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-
-nnoremap <silent> <leader><leader>ur :Unite file_rec -start-insert<cr>
-nnoremap <silent> <leader><leader>uf :Unite file -start-insert<cr>
-nnoremap <silent> <leader><leader>uh :Unite file_mru -start-insert<cr>
-nnoremap ` :Unite buffer -start-insert<cr>
+let g:ctrlp_map = '`'
+let g:ctrlp_working_path_mode = '0'
 
 " Map jj to esc in insert mode. Esc is too far away.
 inoremap jj <Esc>
@@ -41,6 +36,8 @@ cnoreabbrev WA wa
 cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
+
+set list lcs=tab:>-,trail:>
 
 "binds to make HL behave like a stronger h and l
 nnoremap <silent> H ^
@@ -142,4 +139,3 @@ set t_Co=256
 
 " Set binding for sudo save
 cmap w!! w !sudo tee > /dev/null %
-set list lcs=tab:>-,trail:>

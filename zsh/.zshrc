@@ -49,8 +49,6 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # source /var/lib/gems/2.1.0/gems/tmuxinator-0.6.11/completion/tmuxinator.zsh
 source /home/snowy/.rvm/gems/ruby-2.3.0/gems/tmuxinator-0.8.1/completion/tmuxinator.zsh
-alias github="echo 7ed07eddae01a8320057c05533e65a092b1273d0"
-
 
 PYTHONDONTWRITEBYTECODE=false
 export PYTHONDONTWRITEBYTECODE

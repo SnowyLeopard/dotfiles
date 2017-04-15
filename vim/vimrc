@@ -25,6 +25,7 @@ set backspace=indent,eol,start
 
 let g:ctrlp_map = '`'
 let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_custom_ignore = 'node_modules\|dist/\|jspm_packages'
 
 " Map jj to esc in insert mode. Esc is too far away.
 inoremap jj <Esc>
@@ -59,11 +60,11 @@ set cursorcolumn
 
 "automatic and smart indent
 set autoindent
+set noexpandtab
 set copyindent
 set smartindent
 set tabstop=4
 set shiftwidth=4
-set expandtab
 
 "search related settings
 set showcmd
@@ -102,6 +103,7 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_cpp_compiler_options = ' -std=gnu++0x'
 let g:syntastic_php_checkers=['php', 'phpmd']
+let g:syntastic_ruby_checkers=['rubocop']
 
 map <Leader>s :SyntasticToggleMode<CR>
 

@@ -1,0 +1,18 @@
+# ~/.tmuxinator/rconism.yml
+
+project_name: mestac
+project_root: /srv/mestac
+
+windows:
+  - front-end:
+      root: /srv/mestac/front-end
+      layout: 871d,271x70,0,0{215x70,0,0,64,55x70,216,0,65}
+      panes:
+        - vim
+        - gulp watch
+  - api:
+      root: /srv/mestac/api
+      layout: 871d,271x70,0,0{215x70,0,0,64,55x70,216,0,65}
+      panes:
+        - vim
+        - rails s

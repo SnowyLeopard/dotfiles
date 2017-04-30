@@ -19,7 +19,7 @@ set hidden
 "turn on plugins and stuff
 filetype on
 filetype plugin on
-filetype indent on 
+filetype indent on
 
 set backspace=indent,eol,start
 
@@ -38,7 +38,8 @@ cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
 
-set list lcs=tab:>-,trail:>
+" set list lcs=tab:>-,trail:>
+set list lcs=tab:\|\ ,trail:<
 
 "binds to make HL behave like a stronger h and l
 nnoremap <silent> H ^
@@ -141,3 +142,15 @@ set t_Co=256
 
 " Set binding for sudo save
 cmap w!! w !sudo tee > /dev/null %
+
+" indentation lines
+let g:indentLine_setColors = 0
+let g:indentLine_char = '|'
+
+" remap keys for yankstack
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+set updatetime=100

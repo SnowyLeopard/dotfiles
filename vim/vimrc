@@ -8,7 +8,7 @@ call pathogen#infect()
 syntax on
 
 "Background color/style
-set background=dark
+set background=light
 
 "Setting the default colorscheme
 colorscheme solarized
@@ -56,8 +56,8 @@ set laststatus=2
 set number
 
 "turn on line and column markers
-set cursorline
-set cursorcolumn
+" set cursorline
+" set cursorcolumn
 
 "automatic and smart indent
 set autoindent
@@ -151,6 +151,11 @@ let g:indentLine_char = '|'
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
-let g:gitgutter_realtime = 1
-let g:gitgutter_eager = 1
-set updatetime=100
+" let g:gitgutter_realtime = 1
+" let g:gitgutter_eager = 1
+" set updatetime=100
+
+let g:vim_json_syntax_conceal = 0
+
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S

@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/srv/aebapi/config/local_env.yml'
-let g:netrw_dirhist_2='/srv/gmaps/vakureport/.git'
-let g:netrw_dirhist_3='/srv/hal/hal_admin/src/routes/customers'
-let g:netrw_dirhist_4='/srv/hal/hal_admin/src/routes'
-let g:netrw_dirhist_5='/srv/hal/hal_admin/src'
-let g:netrw_dirhist_6='/srv/hal/hal_admin/src/routes'
-let g:netrw_dirhist_7='/srv/hal/hal_admin/src/routes/welcome'
-let g:netrw_dirhist_8='/etc/letsencrypt/renewal'
-let g:netrw_dirhist_9='/home/snowy/dotfiles/zsh'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/etc/nginx/sites-available'
+let g:netrw_dirhist_2='/home/snowy/.ts3client'

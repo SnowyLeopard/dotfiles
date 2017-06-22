@@ -1,10 +1,10 @@
 {
 	"ext": {
 		"shell": {
-			"colorscheme": "solarized"
+			"colorscheme": "solarized-light"
 		},
 		"tmux": {
-			"colorscheme": "solarized"
+			"colorscheme": "solarized-light"
 		},
 		"vim": {
 			"colorscheme": "solarized"

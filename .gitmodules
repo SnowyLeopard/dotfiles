@@ -106,6 +106,6 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "indertLine2"]
+[submodule "vim/bundle/indentLine"]
 	path = vim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine

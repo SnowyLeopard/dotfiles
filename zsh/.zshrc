@@ -46,7 +46,7 @@ $HOME/.local/bin/powerline-daemon -q
 export TERM="xterm-256color"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # source /var/lib/gems/2.1.0/gems/tmuxinator-0.6.11/completion/tmuxinator.zsh
 source /home/snowy/.rvm/gems/ruby-2.3.0/gems/tmuxinator-0.8.1/completion/tmuxinator.zsh
 

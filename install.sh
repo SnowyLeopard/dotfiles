@@ -6,11 +6,7 @@ dotfiles="$HOME/dotfiles"
 echo "********************"
 echo "Installing aptitude packages"
 echo "********************"
-sudo apt-get install python python-pip build-essential htop tmux virtualenvwrapper liblua5.1-dev luajit libluajit-5.1 python-dev mysql-server zsh nginx-full
-
-# Workaround to avoid phpmyadmin installing apache
-sudo apt-get install php5-cli php5-fpm fcgiwrap
-sudo apt-get --no-install-recommends install phpmyadmin
+sudo apt-get install python python-pip build-essential htop tmux liblua5.1-dev luajit libluajit-5.1 python-dev zsh
 
 gem install tmuxinator
 
@@ -147,23 +143,5 @@ then
 else
     echo "********************"
     echo "powerline config already installed"
-    echo "********************"
-fi
-
-# Setup nginx
-if [[ "$(readlink -- "/etc/nginx/sites-available")" != "$dotfiles/nginx" ]]
-then
-    echo "********************"
-    echo "Installing Nginx config"
-    echo "********************"
-    if [[ -d "/etc/nginx/sites-enabled" ]]
-    then
-        sudo rm -r "/etc/nginx/sites-enabled"
-    fi
-
-    sudo ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
-else
-    echo "********************"
-    echo "Nginx config already installed"
     echo "********************"
 fi

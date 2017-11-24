@@ -6,7 +6,7 @@ dotfiles="$HOME/dotfiles"
 echo "********************"
 echo "Installing aptitude packages"
 echo "********************"
-sudo apt-get install python python-pip build-essential htop tmux liblua5.1-dev luajit libluajit-5.1 python-dev zsh
+sudo apt-get install python python-pip build-essential htop tmux liblua5.1-dev luajit libluajit-5.1 zsh rubygems
 
 gem install tmuxinator
 

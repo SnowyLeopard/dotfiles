@@ -36,7 +36,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export PATH="/home/snowy/.rvm/gems/ruby-2.3.0/bin:/home/snowy/.linuxbrew/bin:$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/home/snowy/.local/bin:/home/snowy/.rvm/gems/ruby-2.3.0/bin:/home/snowy/.linuxbrew/bin:$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export POWERLINE_COMMAND="$HOME/.local/bin/powerline"
 export POWERLINE_CONFIG_COMMAND="$HOME/.local/bin/powerline-config"
@@ -48,7 +48,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 #source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # source /var/lib/gems/2.1.0/gems/tmuxinator-0.6.11/completion/tmuxinator.zsh
-source /home/snowy/.rvm/gems/ruby-2.3.0/gems/tmuxinator-0.8.1/completion/tmuxinator.zsh
+# source /home/snowy/.rvm/gems/ruby-2.3.0/gems/tmuxinator-0.8.1/completion/tmuxinator.zsh
 
 PYTHONDONTWRITEBYTECODE=false
 export PYTHONDONTWRITEBYTECODE
@@ -56,4 +56,5 @@ alias mux="tmuxinator"
 
 export EDITOR=vim
 export SHELL=/bin/zsh
+export TERM=xterm-256color
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

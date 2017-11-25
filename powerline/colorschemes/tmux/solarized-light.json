@@ -1,6 +1,17 @@
 {
 	"groups": {
+		"window": { "fg": "lightyellow", "bg": "lightyellow" },
+		"window:divider": { "fg": "lightyellow", "bg": "lightyellow" },
+		"window:current": { "fg": "lightyellow", "bg": "lightyellow" },
+		"window_name": { "fg": "lightyellow", "bg": "lightyellow" },
+		"session": { "fg": "lightyellow", "bg": "lightyellow" },
+		"session:prefix": { "fg": "lightyellow", "bg": "lightyellow" },
+		"active_window_status": { "fg": "lightyellow", "bg": "lightyellow" },
+		"activity_status": { "fg": "lightyellow", "bg": "lightyellow" },
+		"bell_status": { "fg": "lightyellow", "bg": "lightyellow" },
+		"window_status": { "fg": "lightyellow", "bg": "lightyellow" },
 		"divider": { "fg": "lightyellow", "bg": "lightyellow" },
+		"background": { "fg": "lightyellow", "bg": "lightyellow" },
 		"background:divider": { "fg": "lightyellow", "bg": "lightyellow" },
 		"date": { "fg": "gray8", "bg": "lightyellow" },
 		"time": { "fg": "gray8", "bg": "lightyellow", "attr": ["bold"] },
